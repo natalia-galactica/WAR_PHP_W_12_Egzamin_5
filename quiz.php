@@ -1,6 +1,6 @@
 <?php
 
-$answer1 = '';
-$answer2 = '';
-$answer3 = '';
-$answer4 = '';
+$answer1 = 'd';
+$answer2 = 'b';
+$answer3 = 'a';
+$answer4 = 'b,c';
