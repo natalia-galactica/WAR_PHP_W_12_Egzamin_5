@@ -19,13 +19,11 @@ class ExamController extends Controller
      * @Route ("/setUsername/{userName}",name="setuser",methods="GET")
      */
     public function setUAction(SessionInterface $session, $userName)
-    {
-                
+    {                
         $session->set('username', $userName);
         
         $comment = 'Sesja utworzona';
-        return $this->render('ExamBundle:Default:sesja.html.twig', ['comment' => $comment]);
-                
+        return $this->render('ExamBundle:Default:sesja.html.twig', ['comment' => $comment]);                
     }
     
     /**
@@ -53,11 +51,9 @@ class ExamController extends Controller
         $cookie = new \Symfony\Component\HttpFoundation\Cookie ($cookieName, $cookieValue, $cookieTime);
         $resp = new Response('<div>Hello Cookie</div>');
         $resp->headers->setCookie($cookie);
-        
-        
+                
         return $this->render('ExamBundle:Default:cookie.html.twig', ['cookieName' => $cookie->getName(),
-            'czasZycia' => $cookie->getExpiresTime()]);
-        
+            'czasZycia' => $cookie->getExpiresTime()]);        
     }
     
     /**
